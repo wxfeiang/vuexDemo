@@ -1,8 +1,16 @@
 <template>
   <div id="app">
-    <!--绑定传值 -->
-  <product-list-one v-bind:products="products"></product-list-one>
- 
+    <!--绑定传值   不需要属性传值-->
+  <!-- <product-list-one v-bind:products="products"></product-list-one>
+  <product-list-two v-bind:products="products"></product-list-two> -->
+
+  <product-list-one ></product-list-one>
+  <product-list-two ></product-list-two>
+
+
+
+
+  
   </div>
 </template>
 
@@ -15,19 +23,12 @@ export default {
   components: {
     // 注册组件
     "product-list-one": ProductlistOne,
-     "product-list-two": ProductlistTwo
+    "product-list-two": ProductlistTwo
     
   },
   data () {
     return {
-     products:[
-       {name: "马云", price: 200},
-       {name: "马华腾", price: 50},
-       {name: "马蓉", price: 100},
-       {name: "马冬梅", price: 1500}
-
-       
-     ]
+    
     }
   }
 }
